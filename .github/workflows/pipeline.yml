@@ -81,4 +81,4 @@ jobs:
           azcliversion: 2.30.0
           inlineScript: |
             az account show
-            az container create --resource-group {{vars.AZURE_RESOURCE_GROUP}} --name ${{vars.AZURE_CONTAINER_NAME}} --image ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}} --dns-name-label ${{vars.DNS}} --ports ${{vars.PORT}}
+            az container create --resource-group ${{vars.AZURE_RESOURCE_GROUP}} --name ${{vars.AZURE_CONTAINER_NAME}} --image ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}} --dns-name-label ${{vars.DNS}} --ports ${{vars.PORT}}
